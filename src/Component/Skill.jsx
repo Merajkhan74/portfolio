@@ -30,7 +30,7 @@ const Skills = () => {
         </p>
 
         {/* Frontend */}
-        <h2 className="text-2xl font-semibold mb-8">Front End</h2>
+        <h2 className="text-2xl font-semibold mb-8 al">Front End</h2>
 
         <div className="flex flex-wrap gap-10 mb-16">
 
@@ -79,7 +79,7 @@ function SkillCard({ icon, name }) {
     <div className="flex flex-col items-center">
 
       <div className="bg-gray-800 w-20 h-20 rounded-full flex items-center justify-center text-3xl 
-      transition duration-300 hover:bg-[#812d3d]
+      transition duration-300  hover:-translate-y-3
       
       hover:ring-2 hover:ring-gray-500 scale-90">
 
