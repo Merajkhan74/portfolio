@@ -4,7 +4,7 @@ const Education = () => {
   return (
     <section id="education" className=" bg-black text-white py-5 px-6 mt-0">
 
-      <div className="max-w-[1080px] mx-auto">
+      <div className="max-w-5xl mx-auto">
 
         {/* Heading */}
         <h1 className="text-4xl md:text-5xl font-bold mb-12 text-amber-500">

@@ -12,24 +12,23 @@ import {
   SiGithub,
   SiFigma,
   SiVercel,
-//  SiPython,
 } from "react-icons/si";
 
 import { VscCode } from "react-icons/vsc";
-import { FaCss3Alt } from "react-icons/fa";
+import { FaCss3Alt, FaJava } from "react-icons/fa";
 
 const Skills = () => {
   return (
-    <div id="skills" className="min-h-screen bg-black text-white px-10 py-16">
-      <div className="max-w-[1080px] flex flex-col mx-auto">
+    <div id="skills" className="min-h-screen bg-black text-white px-4 sm:px-10 py-16">
+      <div className="max-w-5xl flex flex-col mx-auto">
 
-        <h1 className="text-5xl font-bold mb-4">My Skills</h1>
+        <h1 className="text-4xl sm:text-5xl font-bold mb-4">My Skills</h1>
 
         <p className="text-gray-400 mb-16">
           Technologies and tools I've worked with throughout my projects and experience
         </p>
 
-        {/* Frontend */}
+                {/* Frontend */}
         <h2 className="text-2xl font-semibold mb-8 al">Front End</h2>
 
         <div className="flex flex-wrap gap-10 mb-16">
@@ -42,13 +41,14 @@ const Skills = () => {
           {/* <SkillCard icon={<SiBootstrap className="text-purple-500" />} name="Bootstrap" /> */}
           <SkillCard icon={<SiTailwindcss className="text-sky-400" />} name="Tailwind CSS" />
           <SkillCard icon={<SiPython className="text-sky-400" />} name="Python" />
+          <SkillCard icon={<FaJava className="text-red-500" />} name="Java" />
 
         </div>
 
         {/* Databases */}
         <h2 className="text-2xl font-semibold mb-8">Databases</h2>
 
-        <div className="flex flex-wrap gap-10 mb-16">
+        <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-10 mb-16 ">
 
           <SkillCard icon={<SiMongodb className="text-green-500" />} name="MongoDB" />
           <SkillCard icon={<SiMysql className="text-blue-400" />} name="MySQL" />

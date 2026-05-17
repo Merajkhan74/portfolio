@@ -1,20 +1,18 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import Image from "../assets/MERAJ (2).jpg";
-import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail, MdDownload } from "react-icons/md";
 import { SiReact, SiNextdotjs, SiMongodb, SiTailwindcss } from "react-icons/si";
 import { MdLocationOn } from "react-icons/md";
 const Hero = () => {
   return (
-    <div id="hero" className="min-h-screen bg-gradient-to-br from-gray-950  to-black relative overflow-hidden">
-      <div className=" flex flex-col lg:flex-row items-center min-w-60 max-w-[1080px] justify-between mx-auto ">
+    <div id="hero" className="min-h-screen bg-linear-to-br from-gray-950 to-black relative overflow-hidden">
+      <div className="flex flex-col lg:flex-row items-start gap-10 px-4 sm:px-6 py-10 max-w-5xl mx-auto justify-between">
         
-        <div className="left space-y-6 mt-9 max-w-[550px]">
+        <div className="left space-y-6 mt-6 w-full lg:w-[55%]">
           
           <div>
-            <h1 className="text-white font-bold text-5xl leading-[1.2] pt-2 mt-8">
+            <h1 className="text-white font-bold text-4xl sm:text-5xl leading-tight pt-2 mt-4">
               I'M{" "}
               <span className="text-amber-500 ">
                 <TypeAnimation
@@ -47,23 +45,23 @@ const Hero = () => {
         </div>
 
         
-        <div className="grid grid-cols-2 gap-6  mt-20">
-          <div className="bg-gray-800 p-10 rounded-2xl flex flex-col items-center  ">
-            <SiReact className="text-4xl text-cyan-400 mb-2 animate-bounce  " />
-            <span className="text-sm text-gray-300 ">ReactJs</span>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10 w-full lg:w-[35%]">
+          <div className="bg-gray-800 p-8 rounded-2xl flex flex-col items-center">
+            <SiReact className="text-4xl text-cyan-400 mb-2 animate-bounce" />
+            <span className="text-sm text-gray-300">ReactJs</span>
           </div>
 
-          <div className="bg-gray-800 p-10 rounded-2xl flex flex-col items-center">
-            <SiNextdotjs className="text-4xl mb-2 animate-bounce " />
+          <div className="bg-gray-800 p-8 rounded-2xl flex flex-col items-center">
+            <SiNextdotjs className="text-4xl mb-2 animate-bounce" />
             <span className="text-sm text-gray-300">Next.js</span>
           </div>
 
-          <div className="bg-gray-800 p-10 rounded-2xl flex flex-col items-center">
-            <SiMongodb className="text-4xl text-green-500 mb-2 animate-bounce " />
+          <div className="bg-gray-800 p-8 rounded-2xl flex flex-col items-center">
+            <SiMongodb className="text-4xl text-green-500 mb-2 animate-bounce" />
             <span className="text-sm text-gray-300">MongoDB</span>
           </div>
 
-          <div className="bg-gray-800 p-10 rounded-2xl flex flex-col items-center">
+          <div className="bg-gray-800 p-8 rounded-2xl flex flex-col items-center">
             <SiTailwindcss className="text-4xl text-sky-400 mb-2 animate-bounce" />
             <span className="text-sm text-gray-300">Tailwind CSS</span>
           </div>
@@ -71,33 +69,47 @@ const Hero = () => {
       </div>
      
               {/* Buttons */}
-        <div className="flex gap-4 pt-4 mx-auto min-w-60 max-w-[1080px] ">
-          <a
-            href="/MD_Meraj_Khan_Frontend_Developer_Resume.pdf.pdf"
-            download
-            className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition"
-          >
-            <MdDownload /> Resume
-          </a>
+        <div className="flex flex-nowrap  gap-5 px-4 w-full max-w-5xl mx-auto">
 
-          <div className="flex gap-3">
-            <Link to={"https://github.com/Merajkhan74"} className="border border-gray-700 p-3 rounded-lg hover:bg-gray-800 hover:scale-115">
-              <FaGithub />
-            </Link>
+  {/* Resume Button */}
+  <a
+    href="/MD_Meraj_Khan_Frontend_Developer_Resume.pdf.pdf"
+    download
+    className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition whitespace-nowrap text-sm"
+  >
+    <MdDownload /> Resume
+  </a>
 
-            <a href="mailto:merajkhan05km@gmail.com" className="border border-gray-700 p-3 rounded-lg hover:bg-gray-800 hover:scale-115 ">
-              <MdEmail />
-            </a>
+  {/* Icons */}
+  <div className="flex gap-5">
+    <a
+      href="https://github.com/Merajkhan74"
+      target="_blank"
+      rel="noreferrer"
+      className="border border-gray-700 p-2 rounded-lg hover:bg-gray-800 transition"
+    >
+      <FaGithub />
+    </a>
 
-            <a href="https://www.linkedin.com/in/mdmeraj-khan/" 
-            className="border border-gray-700 p-3 rounded-lg hover:bg-gray-800 hover:scale-115">
-              <FaLinkedin />
-            </a>
-            
-          </div>
-          </div>
-    </div>
-   
+    <a
+      href="mailto:merajkhan05km@gmail.com"
+      className="border border-gray-700 p-2 rounded-lg hover:bg-gray-800 transition"
+    >
+      <MdEmail />
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/mdmeraj-khan/"
+      target="_blank"
+      rel="noreferrer"
+      className="border border-gray-700 p-2 rounded-lg hover:bg-gray-800 transition"
+    >
+      <FaLinkedin />
+    </a>
+  </div>
+
+</div>
+      </div>
   );
 };
 
