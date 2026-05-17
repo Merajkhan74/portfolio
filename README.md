@@ -6,7 +6,7 @@ A modern, responsive portfolio website showcasing my projects, skills, and front
 
 ## 🌐 Live Demo
 
-🔗 https://portfolio-one-cyan-15.vercel.app/
+🔗 https://portfolio-nine-lyart-63limq77yy.vercel.app/
 
 ---
 
@@ -51,7 +51,7 @@ This portfolio demonstrates my ability to build scalable, user-friendly, and vis
 **Meraj Khan**
 
 * GitHub: https://github.com/Merajkhan74
-* Portfolio: https://portfolio-one-cyan-15.vercel.app/
+* Portfolio: https://portfolio-nine-lyart-63limq77yy.vercel.app/
 
 ---
 
