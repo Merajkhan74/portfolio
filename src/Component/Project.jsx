@@ -39,7 +39,7 @@ const Projects = () => {
 
             <div className="flex gap-4">
               <Link
-                to={"https:razorpay-inspired-payment-platform-delta.vercel.app"}
+                to={"https://razorpay-inspired-payment-platform-delta.vercel.app/"}
                 // className="px-4 py-2 bg-blue-500 hover:bg-blue-800 text-white text-black rounded font-semibold "
                 className="px-4 py-2 bg-white text-black rounded font-semibold "
               >
