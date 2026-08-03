@@ -1,6 +1,5 @@
-import Relinkct from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import MerajImage from "../assets/MERAJ (2).jpg";
 import RazorPay from "../assets/Rezar-pay.jpeg";
 import MusicImage from "../assets/Music-page.jpeg";
 import SyncImage from "../assets/Sync_image.jpeg";
@@ -10,16 +9,17 @@ const Projects = () => {
   return (
     <section id="project" className="py-24 bg-black text-white">
       <div className="max-w-[1080px] mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-amber-500 mb-16">
+        <h2 className="text-4xl font-bold text-center mb-16">
           Featured Projects
         </h2>
 
-        <div className="flex flex-col lg:flex-row items-center min-w-60 max-w-[1080px] justify-between mx-auto gap-7 border border-white rounded-md p-2 ">
-          <div className="left space-y-6 h-[400px] max-w-[450px] overflow-y-scroll no-scrollbar">
-            <img src={RazorPay} alt="" className="min-w-[400px]" />
+        {/* Project 1 */}
+        <div className="flex flex-col lg:flex-row items-center w-full max-w-[1080px] justify-between mx-auto gap-7 border border-white rounded-md p-2">
+          <div className="left space-y-6 h-[250px] sm:h-[400px] w-full lg:max-w-[450px] overflow-y-scroll no-scrollbar">
+            <img src={RazorPay} alt="Razorpay Inspired Payment Platform" className="w-full lg:min-w-[400px] rounded" />
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:scale-102 transition shadow-lg h-[400px] min-w-[450px]">
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:scale-102 transition shadow-lg h-auto lg:h-[400px] w-full lg:min-w-[450px]">
             <h3 className="text-xl font-semibold mb-3 text-amber-400">
               Razorpay-Inspired Payment Platform UI
             </h3>
@@ -30,7 +30,7 @@ const Projects = () => {
               components and modern UI layout.
             </p>
 
-            <ul className="text-sm text-gray-400 mb-4 space-y-1 leading-[2.1] ">
+            <ul className="text-sm text-gray-400 mb-4 space-y-1 leading-[2.1]">
               <li>• React.js Component Architecture</li>
               <li>• Advanced Tailwind CSS Layout</li>
               <li>• Responsive Grid System</li>
@@ -40,17 +40,14 @@ const Projects = () => {
             <div className="flex gap-4">
               <Link
                 to={"https://razorpay-inspired-payment-platform-delta.vercel.app/"}
-                // className="px-4 py-2 bg-blue-500 hover:bg-blue-800 text-white text-black rounded font-semibold "
-                className="px-4 py-2 bg-white text-black rounded font-semibold "
+                target="_blank"
+                className="px-4 py-2 bg-white text-black rounded font-semibold"
               >
                 Live
-               <img src={IconsPng} alt="" className="w-6 h-6 inline-block ml-2" />
-
+                <img src={IconsPng} alt="" className="w-6 h-6 inline-block ml-2" />
               </Link>
               {/* <Link
-                to={
-                  "https://github.com/Merajkhan74/Razorpay-Inspired-Payment-Platform-UI"
-                }
+                to={"https://github.com/Merajkhan74/Razorpay-Inspired-Payment-Platform-UI"}
                 className="px-4 py-2 border border-white rounded hover:bg-amber-500"
               >
                 GitHub
@@ -59,18 +56,18 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* project 2  */}
-        <div className="flex flex-col lg:flex-row items-center min-w-80 max-w-[1080px] justify-between mx-auto gap-7 border border-white rounded-md p-2 mt-10 ">
-          <div className="left space-y-6 h-[400px] max-w-[450px] overflow-y-scroll no-scrollbar">
-            <img src={MusicImage} alt="" className="min-w-[400px]" />
+        {/* Project 2 */}
+        <div className="flex flex-col lg:flex-row items-center w-full max-w-[1080px] justify-between mx-auto gap-7 border border-white rounded-md p-2 mt-10">
+          <div className="left space-y-6 h-[250px] sm:h-[400px] w-full lg:max-w-[450px] overflow-y-scroll no-scrollbar">
+            <img src={MusicImage} alt="Music Streaming Website" className="w-full lg:min-w-[400px] rounded" />
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:scale-102 transition shadow-lg h-[400px] min-w-[450px]">
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:scale-102 transition shadow-lg h-auto lg:h-[400px] w-full lg:min-w-[450px]">
             <h3 className="text-xl font-semibold mb-3 text-amber-400">
               Music Streaming Website
             </h3>
 
-            <p className="text-gray-300 text-sm mb-4 mr-">
+            <p className="text-gray-300 text-sm mb-4">
               A modern responsive music website interface designed to provide an
               engaging user experience for music discovery. The project focuses
               on clean UI design, responsive layouts, and structured content
@@ -88,8 +85,8 @@ const Projects = () => {
               <Link
                 to={"https://music-website-6z9d.vercel.app/"}
                 target="_blank"
-              //   className="px-4 py-2 bg-blue-500 hover:bg-blue-800 text-white text-black rounded font-semibold "
-              className="px-4 py-2 bg-white text-black rounded font-semibold ">
+                className="px-4 py-2 bg-white text-black rounded font-semibold"
+              >
                 Live
                 <img src={IconsPng} alt="" className="w-6 h-6 inline-block ml-2" />
               </Link>
@@ -102,37 +99,40 @@ const Projects = () => {
               </Link> */}
             </div>
           </div>
-        </div>   
-        {/* Project 03  */}
-           <div className="flex flex-col lg:flex-row items-center min-w-60 max-w-[1080px] justify-between mx-auto gap-7 border border-white rounded-md p-2 mt-10 ">
-          <div className="left space-y-6 h-[400px] max-w-[450px] overflow-y-scroll no-scrollbar">
-            <img src={SyncImage} alt="" className="min-w-[400px] "  />
+        </div>
+
+        {/* Project 3 */}
+        <div className="flex flex-col lg:flex-row items-center w-full max-w-[1080px] justify-between mx-auto gap-7 border border-white rounded-md p-2 mt-10">
+          <div className="left space-y-6 h-[250px] sm:h-[400px] w-full lg:max-w-[450px] overflow-y-scroll no-scrollbar">
+            <img src={SyncImage} alt="StudySync Learning Platform" className="w-full lg:min-w-[400px] rounded" />
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:scale-102 transition shadow-lg h-[400px] min-w-[450px]">
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:scale-102 transition shadow-lg h-auto lg:h-[400px] w-full lg:min-w-[450px]">
             <h3 className="text-xl font-semibold mb-3 text-amber-400">
               StudySync
             </h3>
-           
 
             <p className="text-gray-300 text-sm mb-4">
-              StudySync is a responsive and visually engaging learning platform UI built with React and Tailwind CSS. The project focuses on delivering a seamless and modern user experience with clean component architecture and structured layout design.
+              StudySync is a responsive and visually engaging learning platform UI
+              built with React and Tailwind CSS. The project focuses on delivering
+              a seamless and modern user experience with clean component
+              architecture and structured layout design.
             </p>
 
             <ul className="text-sm text-gray-400 mb-4 space-y-2">
-              <li>•Built using React + Vite for fast development and optimized performance</li>
+              <li>• Built using React + Vite for fast development and optimized performance</li>
               <li>• Designed scalable and reusable UI components</li>
               <li>• Implemented responsive design using Tailwind CSS</li>
               <li>• Applied modern design principles (spacing, typography, color balance)</li>
-               <li>• Structured landing page sections: Hero, Features, Testimonials, CTA, Footer</li> 
-               <li>• Deployed on Vercel for production-ready hosting</li>
+              <li>• Structured landing page sections: Hero, Features, Testimonials, CTA, Footer</li>
+              <li>• Deployed on Vercel for production-ready hosting</li>
             </ul>
 
             <div className="flex gap-4">
               <Link
                 to={"https://study-sync-nu-eight.vercel.app/"}
                 target="_blank"
-                className="px-4 py-2 bg-white text-black rounded font-semibold "
+                className="px-4 py-2 bg-white text-black rounded font-semibold"
               >
                 Live
                 <img src={IconsPng} alt="" className="w-6 h-6 inline-block ml-2" />

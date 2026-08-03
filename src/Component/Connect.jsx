@@ -1,6 +1,20 @@
 import { useState } from 'react';
+import { motion } from "framer-motion";
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 function Connect() {
   const [result, setResult] = useState("");
@@ -10,12 +24,10 @@ function Connect() {
     message: ""
   });
 
-  // Input fields ki value change handle karne ke liye
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Form submit hone par Web3Forms ko data bhejne ke liye
   const handleSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
@@ -36,7 +48,6 @@ function Connect() {
 
       if (data.success) {
         setResult("Message Sent Successfully!");
-        // Form ko khali karne ke liye
         setFormData({ name: "", email: "", message: "" });
       } else {
         console.log("Error", data);
@@ -50,17 +61,29 @@ function Connect() {
 
   return (
     <div id="connect" className="min-h-screen bg-black text-white px-4 md:px-10 py-16">
-      <h1 className="text-4xl sm:text-5xl font-bold mb-12 text-center">
+      <motion.h1
+        variants={item}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-4xl sm:text-5xl font-bold mb-12 text-center"
+      >
         Contact Me
-      </h1>
+      </motion.h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+      >
         {/* Left Side */}
-        <div>
+        <motion.div variants={item}>
           <h2 className="text-3xl font-semibold mb-8">Get In Touch</h2>
 
-          <div className="space-y-8 ">
-            <div className="flex items-center gap-4 transition duration-300 hover:-translate-x-3">
+          <motion.div className="space-y-8" variants={container}>
+            <motion.div variants={item} className="flex items-center gap-4 transition duration-300 hover:-translate-x-3">
               <div className="bg-gray-800 p-4 rounded-full">
                 <MdEmail className="text-2xl" />
               </div>
@@ -71,9 +94,9 @@ function Connect() {
                   merajkhan05km@gmail.com
                 </a>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center gap-4 transition duration-300 hover:-translate-x-3">
+            <motion.div variants={item} className="flex items-center gap-4 transition duration-300 hover:-translate-x-3">
               <div className="bg-gray-800 p-4 rounded-full">
                 <MdPhone className="text-2xl" />
               </div>
@@ -83,9 +106,9 @@ function Connect() {
                   +91 8864000860
                 </a>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center gap-4 transition duration-300 hover:-translate-x-3">
+            <motion.div variants={item} className="flex items-center gap-4 transition duration-300 hover:-translate-x-3">
               <div className="bg-gray-800 p-4 rounded-full">
                 <MdLocationOn className="text-2xl" />
               </div>
@@ -95,9 +118,9 @@ function Connect() {
                   Hyderabad, India
                 </a>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center gap-4 transition duration-300 hover:-translate-x-3">
+            <motion.div variants={item} className="flex items-center gap-4 transition duration-300 hover:-translate-x-3">
               <div className="bg-gray-800 p-4 rounded-full">
                 <FaLinkedin className="text-2xl" />
               </div>
@@ -107,12 +130,12 @@ function Connect() {
                   linkedin.com/in/md-meraj-khan
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
 
         {/* Right Side */}
-        <div>
+        <motion.div variants={item}>
           <h2 className="text-3xl font-semibold mb-8">Send Me a Message</h2>
 
           <form className="space-y-6" onSubmit={handleSubmit}>
@@ -153,14 +176,13 @@ function Connect() {
             </button>
           </form>
 
-          {/* Status Message Display */}
           {result && (
             <p className={`mt-4 text-center text-sm ${result.includes("Successfully") ? "text-green-500" : "text-yellow-500"}`}>
               {result}
             </p>
           )}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }

@@ -1,55 +1,79 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 const Education = () => {
   return (
-    <section id="education" className=" bg-black text-white py-5 px-6 mt-0">
-
-      <div className="max-w-5xl mx-auto">
-
+    <section id="education" className="bg-black text-white py-5 px-6 mt-0">
+      <motion.div
+        className="max-w-5xl mx-auto px-4"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl font-bold mb-12 text-amber-500">
+        <motion.h1
+          variants={item}
+          className="text-4xl md:text-5xl font-bold mb-12"
+        >
           Education
-        </h1>
+        </motion.h1>
 
         <div className="space-y-8">
 
           {/* B.Tech */}
-          <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-amber-500 transition">
-            <h2 className="text-2xl font-semibold">
+          <motion.div
+            variants={item}
+            className="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-amber-500 transition"
+          >
+            <h3 className="text-2xl font-semibold">
               Maulana Azad National Urdu University, Hyderabad
-            </h2>
-
-            <p className="text-gray-400 mt-2">
-              B.Tech (Lateral Entry), Information Technology
-            </p>
-
-            <p className="text-gray-500 mt-1">
-              2026 – Present • CGPA: 7.91
-            </p>
-          </div>
-
-          {/* Diploma */}
-          <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-amber-500 transition">
-            <h3 className="text-xl font-semibold">
-              Diploma in Information Technology
             </h3>
 
             <p className="text-gray-400 mt-2">
-              Maulana Azad National Urdu University (MANUU), Hyderabad
-            </p>
-            <p className="text-gray-500 mt-1">
-             2020-2023   •  CGPA : 8.53
+              B.Tech, Computer Science
             </p>
 
-            <p className="text-gray-400 mt-1">
-              CGPA: <span className="text-white">8.53</span>
+            <p className="text-gray-500 mt-1">
+              2023 – 2026 • CGPA: 8.17
             </p>
-          </div>
+          </motion.div>
+
+          {/* Diploma */}
+          <motion.div
+            variants={item}
+            className="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-amber-500 transition"
+          >
+            <h3 className="text-2xl font-semibold">
+              Maulana Azad National Urdu University, Hyderabad
+            </h3>
+
+            <p className="text-gray-400 mt-2">
+              Diploma in Information Technology
+            </p>
+            <p className="text-gray-500 mt-1">
+              2020-2023 • CGPA: 8.53
+            </p>
+          </motion.div>
 
         </div>
 
-      </div>
-
+      </motion.div>
     </section>
   );
 };

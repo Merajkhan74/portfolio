@@ -14,34 +14,39 @@ const Hero = () => {
           <div>
             <h1 className="text-white font-bold text-4xl sm:text-5xl leading-tight pt-2 mt-4">
               I'M{" "}
-              <span className="text-amber-500 ">
-                <TypeAnimation
-                  sequence={[
-                    "MD MERAJ KHAN",
-                    2000,
-                    " A WEB DEVELOPER",
-                    2000,
-                    // "A FRONTEND DEVELOPER",
-                    2000,
-                  ]}
-                  wrapper="span"
-                  speed={50}
-                  repeat={Infinity}
-                />
+              <span className="text-amber-500  ">
+                 <TypeAnimation 
+                    sequence={[
+                      "MD MERAJ KHAN",
+                      2000, // yahan number = milliseconds ka pause
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    repeat={Infinity}
+                  />
               </span>
+                
             </h1>
-            <div className="flex items-center  gap-2 text-gray-400 mt-3">
-            <MdLocationOn className="text-xl text-red-500" />
+          <div className="mt-3 flex items-center gap-3 text-sm text-gray-400">
+            <span className="uppercase tracking-wide">
+              Full-Stack MERN Developer
+            </span>
+
+            <span className="text-gray-600">|</span>
+
+            <MdLocationOn className="text-red-500 text-lg" />
+
             <span>Hyderabad, India</span>
           </div>
           </div>
-          <p className="text-gray-400 leading-relaxed">
-            I am a passionate Full Stack Developer focused on building responsive
-            and modern web applications. I specialize in React, JavaScript, and
-            Tailwind CSS to create fast, user-friendly interfaces. I enjoy
-            learning new technologies and continuously improving my development
-            skills.
-          </p>
+      <p className="text-gray-400 leading-relaxed">
+          I'm a Full-Stack Developer specializing in the MERN stack — MongoDB,
+          Express.js, React.js, and Node.js. I build scalable, secure web
+          applications, from RESTful APIs and JWT authentication to clean,
+          responsive frontend interfaces. I follow best practices like MVC
+          architecture and I'm always looking to sharpen my skills with new
+          tools and technologies.
+        </p>
         </div>
 
         
@@ -102,7 +107,8 @@ const Hero = () => {
       href="https://www.linkedin.com/in/mdmeraj-khan/"
       target="_blank"
       rel="noreferrer"
-      className="border border-gray-700 p-2 rounded-lg hover:bg-gray-800 transition"
+      className="border border-gray-700 p-2 rounded-lg
+       hover:bg-gray-800 transition"
     >
       <FaLinkedin />
     </a>

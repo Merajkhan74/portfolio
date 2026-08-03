@@ -1,42 +1,89 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 const About = () => {
   return (
-    <section id="about" className="bg-black text-white py-12 px-6 mt-0">
+    <section id="about" className="bg-black text-white py-20 px-6">
+      <motion.div
+        className="mx-auto max-w-5xl px-4"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {/* Heading with accent line */}
+        <motion.div variants={item} className="mb-12">
+        
+          <h1 className="text-4xl md:text-5xl font-bold mt-2 text-white">
+            About Me
+          </h1>
+          <div className="w-16 h-1 bg-amber-500 mt-4 rounded-full"></div>
+        </motion.div>
 
-      <div className="mx-auto max-w-5xl px-4">
+        {/* About Cards */}
+        <div className="space-y-6">
+          <motion.div
+            variants={item}
+            className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 hover:border-amber-500/50 transition"
+          >
+            <p className="text-lg leading-8 text-gray-300">
+              Hi, I'm <span className="text-white font-semibold">Md Meraj Khan</span>, a Computer Science graduate
+              (B.Tech, CGPA: 8.17) from{" "}
+              <span className="text-amber-400 font-semibold">Maulana Azad National Urdu University (MANUU), Hyderabad</span>,
+              with a Diploma in Information Technology from the same university.
+            </p>
+          </motion.div>
 
-        {/* Heading */}
-        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-amber-500">
-          About Me
-        </h1>
+          <motion.div
+            variants={item}
+            className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 hover:border-amber-500/50 transition"
+          >
+            <p className="text-lg leading-8 text-gray-300">
+              I'm a <span className="text-white font-semibold">Full-Stack Developer</span> specializing in the{" "}
+              <span className="text-amber-400 font-semibold">MERN stack (MongoDB, Express.js, React.js, Node.js)</span>,
+              with a strong focus on building scalable, secure, and responsive web applications — from RESTful
+              APIs and JWT-based authentication to clean, intuitive frontend interfaces.
+            </p>
+          </motion.div>
 
-        {/* About Text */}
-        <p className="text-lg leading-8 mb-6 text-gray-300">
-          Hi, I'm <span className="text-white font-semibold">Md Meraj Khan</span>, 
-          a B.Tech Final Year student at 
-          <span className="text-amber-400"> Maulana Azad National Urdu University (MANUU), Hyderabad</span>. 
-          I have also completed my Diploma from the same university, where I built a strong
-          foundation in technical knowledge and problem-solving skills.
-        </p>
+          <motion.div
+            variants={item}
+            className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 hover:border-amber-500/50 transition"
+          >
+            <p className="text-lg leading-8 text-gray-300">
+              I've built and deployed multiple full-stack and frontend projects, including a role-based project
+              management backend with{" "}
+              <span className="text-white font-semibold">30+ RESTful endpoints</span>. I write clean,
+              maintainable code and follow industry best practices like{" "}
+              <span className="text-amber-400 font-semibold">MVC architecture</span>.
+            </p>
+          </motion.div>
 
-        <p className="text-lg leading-8 mb-6 text-gray-300">
-          I am passionate about web development and enjoy building modern,
-          responsive, and user-friendly web applications. My main focus is
-          on frontend development using technologies like 
-          <span className="text-amber-400"> HTML, CSS, JavaScript, React.js, and Tailwind CSS</span>.
-        </p>
-
-        <p className="text-lg leading-8 mb-10 text-gray-300">
-          During my learning journey, I have worked on several projects that
-          helped me improve my development skills and understand how to build
-          real-world applications. I am always eager to learn new technologies
-          and grow as a developer.
-        </p>
-
-
-      </div>
-
+          <motion.div
+            variants={item}
+            className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 hover:border-amber-500/50 transition"
+          >
+            <p className="text-lg leading-8 text-gray-300">
+              I'm currently looking for an{" "}
+              <span className="text-white font-semibold">Entry-Level Software Engineer</span> role where I can
+              apply my skills, keep learning, and contribute to building real, impactful products.
+            </p>
+          </motion.div>
+        </div>
+      </motion.div>
     </section>
   );
 };
