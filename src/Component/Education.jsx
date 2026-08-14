@@ -18,7 +18,7 @@ const item = {
 
 const Education = () => {
   return (
-    <section id="education" className="bg-black text-white py-5 px-6 mt-0">
+    <section id="education" className=" bg-black text-white py-5 px-6 ">
       <motion.div
         className="max-w-5xl mx-auto px-4"
         variants={container}
@@ -29,9 +29,10 @@ const Education = () => {
         {/* Heading */}
         <motion.h1
           variants={item}
-          className="text-4xl md:text-5xl font-bold mb-12"
+          className="text-4xl md:text-5xl font-bold mb-12 mt-12 ml-3 "
         >
           Education
+          <div className="w-16 h-1 bg-amber-500 mt-4 rounded-full"></div>
         </motion.h1>
 
         <div className="space-y-8">

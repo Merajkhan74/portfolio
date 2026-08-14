@@ -6,7 +6,7 @@ import { SiReact, SiNextdotjs, SiMongodb, SiTailwindcss } from "react-icons/si";
 import { MdLocationOn } from "react-icons/md";
 const Hero = () => {
   return (
-    <div id="hero" className="min-h-screen bg-linear-to-br from-gray-950 to-black relative overflow-hidden">
+    <div id="hero" className="min-h-[90vh] b bg-linear-to-br from-gray-950 to-black relative overflow-hidden">
       <div className="flex flex-col lg:flex-row items-start gap-10 px-4 sm:px-6 py-10 max-w-5xl mx-auto justify-between">
         
         <div className="left space-y-6 mt-6 w-full lg:w-[55%]">
@@ -74,13 +74,13 @@ const Hero = () => {
       </div>
      
               {/* Buttons */}
-        <div className="flex flex-nowrap  gap-5 px-4 w-full max-w-5xl mx-auto">
+    <div className="flex flex-nowrap  gap-5 px-5 w-full max-w-5xl mx-auto">
 
   {/* Resume Button */}
   <a
-    href="/MD_Meraj_Khan_Frontend_Developer_Resume.pdf.pdf"
+    href="/portfolio/public/MERN_Stack_Resume.pdf"
     download
-    className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition whitespace-nowrap text-sm"
+    className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-gray-800 hover:border-amber-500 transition whitespace-nowrap text-sm"
   >
     <MdDownload /> Resume
   </a>
@@ -91,14 +91,14 @@ const Hero = () => {
       href="https://github.com/Merajkhan74"
       target="_blank"
       rel="noreferrer"
-      className="border border-gray-700 p-2 rounded-lg hover:bg-gray-800 transition"
+      className="border border-gray-700 p-2 rounded-lg hover:bg-gray-800  hover:border-amber-500 transition"
     >
       <FaGithub />
     </a>
 
     <a
       href="mailto:merajkhan05km@gmail.com"
-      className="border border-gray-700 p-2 rounded-lg hover:bg-gray-800 transition"
+      className="border border-gray-700 p-2 rounded-lg hover:bg-gray-800 hover:border-amber-500 transition"
     >
       <MdEmail />
     </a>
@@ -108,7 +108,7 @@ const Hero = () => {
       target="_blank"
       rel="noreferrer"
       className="border border-gray-700 p-2 rounded-lg
-       hover:bg-gray-800 transition"
+       hover:bg-gray-800 hover:border-amber-500  transition"
     >
       <FaLinkedin />
     </a>

@@ -72,14 +72,14 @@ function Connect() {
       </motion.h1>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto"
+        className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto "
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.1 }}
       >
         {/* Left Side */}
-        <motion.div variants={item}>
+        <motion.div variants={item} >
           <h2 className="text-3xl font-semibold mb-8">Get In Touch</h2>
 
           <motion.div className="space-y-8" variants={container}>

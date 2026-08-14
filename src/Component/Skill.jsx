@@ -35,20 +35,21 @@ const item = {
 
 const Skills = () => {
   return (
-    <div id="skills" className="min-h-screen bg-black text-white px-4 sm:px-10 py-16">
+    <div id="skills" className="min-h-screen bg-black text-white px-4 sm:px-10 py-16 mr:2">
       <motion.div
-        className="max-w-5xl flex flex-col mx-auto"
+        className="max-w-5xl mx-auto px-4 "
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.1 }}
       >
 
-        <motion.h1 variants={item} className="text-4xl sm:text-5xl font-bold mb-4">
+        <motion.h1 variants={item} className="text-4xl sm:text-5xl font-bold mb-4 ml-2">
           My Skills
+          <div className="w-16 h-1 bg-amber-500 mt-4 rounded-full"></div>
         </motion.h1>
 
-        <motion.p variants={item} className="text-gray-400 mb-16">
+        <motion.p variants={item} className="text-gray-400 mb-16 ml-2 ">
           Technologies and tools I've worked with throughout my projects and experience
         </motion.p>
 

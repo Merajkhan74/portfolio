@@ -16,7 +16,7 @@ const item = {
 
 const About = () => {
   return (
-    <section id="about" className="bg-black text-white py-20 px-6">
+    <section id="about" className="bg-black text-white py-3 px-6">
       <motion.div
         className="mx-auto max-w-5xl px-4"
         variants={container}
@@ -25,12 +25,14 @@ const About = () => {
         viewport={{ once: true, amount: 0.2 }}
       >
         {/* Heading with accent line */}
-        <motion.div variants={item} className="mb-12">
+        <motion.div variants={item} className="mb-12 ">
         
-          <h1 className="text-4xl md:text-5xl font-bold mt-2 text-white">
+          <h1 className="text-4xl   md:text-5xl font-bold mt-6 text-white ml-2 ">
             About Me
-          </h1>
+            
           <div className="w-16 h-1 bg-amber-500 mt-4 rounded-full"></div>
+          </h1>
+          
         </motion.div>
 
         {/* About Cards */}

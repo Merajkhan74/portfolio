@@ -10,7 +10,7 @@ import Connect from "./Component/Connect";
 import Layout from "./Component/Layout";
 import Education from "./Component/Education";
 
-
+// path apne file location ke hisaab se adjust karo
 const router = createBrowserRouter([
   {
     path: "/",
