@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail, MdDownload } from "react-icons/md";
 import { SiReact, SiNextdotjs, SiMongodb, SiTailwindcss } from "react-icons/si";
 import { MdLocationOn } from "react-icons/md";
+// import "../../public/"
 const Hero = () => {
   return (
     <div id="hero" className="min-h-[90vh] b bg-linear-to-br from-gray-950 to-black relative overflow-hidden">
@@ -78,7 +79,7 @@ const Hero = () => {
 
   {/* Resume Button */}
   <a
-    href="/portfolio/public/MERN_Stack_Resume.pdf"
+    href="/MERN_STACK_Meraj_Resume.pdf"
     download
     className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-gray-800 hover:border-amber-500 transition whitespace-nowrap text-sm"
   >

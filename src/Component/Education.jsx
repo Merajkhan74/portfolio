@@ -51,7 +51,7 @@ const Education = () => {
             </p>
 
             <p className="text-gray-500 mt-1">
-              2023 – 2026 • CGPA: 8.17
+              2023 – 2026 • CGPA: 8.18
             </p>
           </motion.div>
 
