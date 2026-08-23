@@ -5,6 +5,7 @@ import MusicImage from "../assets/Music-page.jpeg";
 import SyncImage from "../assets/Sync_image.jpeg";
 import IconsPng from "../assets/icons.png";
 import youtube from "../assets/YoutubeBacken-Img.png";
+import Collaborative from "../assets/Collaborative.png"
 
 const Projects = () => {
   return (
@@ -240,6 +241,14 @@ const Projects = () => {
                     MongoDB
                   </span>
 
+                   <span
+                    className="flex items-center justify-center px-2 py-1.5 sm:px-3 sm:py-1.5
+                         rounded-full bg-pink-500/10 text-pink-500
+                         text-[10px] sm:text-xs md:text-sm
+                         border border-green-400/20 whitespace-nowrap"
+                  >
+                    Mongoose
+                  </span>
                   <span
                     className="flex items-center justify-center px-2 py-1.5 sm:px-3 sm:py-1.5
                          rounded-full bg-red-500/10 text-red-400
@@ -274,9 +283,9 @@ const Projects = () => {
                     href="https://github.com/Merajkhan74/YouTubeClone"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto text-center px-5 py-2.5
-                     rounded-lg bg-red-600 text-white text-sm font-medium
-                     transition hover:bg-red-700 w-full"
+                    className="w-full sm:w-auto text-center px-5 py-2.5 mt-2
+                     rounded-lg bg-blue-500 text-white text-sm font-medium
+                     transition hover:bg-red-800 w-full "
                   >
                     GitHub
                   </a>
@@ -285,7 +294,7 @@ const Projects = () => {
                     className="w-full sm:w-auto px-5 py-2.5
                      rounded-lg border border-white/20
                      text-white text-sm font-medium
-                     transition hover:bg-white/10  cursor-not-allowed "
+                     transition hover:bg-white/10  cursor-not-allowed  mt-2"
                   >
                     View Project
                   </button>
@@ -294,16 +303,15 @@ const Projects = () => {
             </div>
 
             {/* 2 project Box  */}
-            {/* <div className="w-full max-w-[500px] h-[450px] mx-auto mt-10 overflow-hidden rounded-2xl border border-white/20 bg-white/5 shadow-2xl backdrop-blur-md">
-           
-              <div className="w-full overflow-hidden h-[180px]">
-                <img
-                  src={youtube}
-                  alt="YouTube Backend Project"
-                  className="w-full h-45  lg:h-[350px]  mt-2 sm:h-56 md:h-64 object-cover transition-transform duration-500 hover:scale-105    "
-                />
-              </div>
+             <div className="w-full max-w-[500px] h-[450px] mx-auto mt-10 overflow-hidden rounded-2xl border border-white/20 bg-white/5 shadow-2xl backdrop-blur-md">
 
+        <div className="w-full  h-[180px] overflow-hidden">
+          <img
+            src={Collaborative}
+            alt="Collaborative Project Management"
+            className="w-full  object-contain object-center block "
+          />
+        </div>
         
               <div className="p-2 sm:p-2 md:p-2">
                
@@ -313,9 +321,7 @@ const Projects = () => {
 
               
                 <p className="text-gray-300 text-xs sm:text-sm leading-5 sm:leading-6 mb-2 pl-1.5 ">
-                  A scalable YouTube-inspired backend built with Node.js,
-                  Express.js and MongoDB featuring JWT authentication, video
-                  uploads, Cloudinary integration, and RESTful APIs.
+             A scalable RESTful backend for collaborative project management with secure authentication, role-based access control, project and team management, task and subtask tracking, project notes, and file attachments.
                 </p>
 
                 <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-2.5 md:gap-3 mb-2 pl-1.5">
@@ -344,6 +350,14 @@ const Projects = () => {
                          border border-green-400/20 whitespace-nowrap"
                   >
                     MongoDB
+                  </span>
+                   <span
+                    className="flex items-center justify-center px-2 py-1.5 sm:px-3 sm:py-1.5
+                         rounded-full bg-pink-500/10 text-pink-500
+                         text-[10px] sm:text-xs md:text-sm
+                         border border-green-400/20 whitespace-nowrap"
+                  >
+                    Mongoose
                   </span>
 
                   <span
@@ -381,7 +395,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto text-center px-5 py-2.5
-                     rounded-lg bg-red-600 text-white text-sm font-medium
+                     rounded-lg bg-blue-600 text-white text-sm font-medium
                      transition hover:bg-red-700 w-full"
                   >
                     GitHub
@@ -391,13 +405,13 @@ const Projects = () => {
                     className="w-full sm:w-auto px-5 py-2.5
                      rounded-lg border border-white/20
                      text-white text-sm font-medium
-                     transition hover:bg-white/10"
+                     transition hover:bg-white/10  cursor-not-allowed "
                   >
                     View Project
-                  {/* </button> */}
-                {/* </div> */}
-              {/* </div> */}
-            {/* </div> */} 
+                  </button>
+                </div>
+              </div>
+            </div>  
           </div>
         </div>
       </div>
