@@ -188,7 +188,7 @@ const Projects = () => {
         {/* YouTube Backend Project */}
         <div className="  ">
           <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-8  justify-center">
-            <div className="w-full max-w-[500px] h-[450px] mx-auto mt-10 overflow-hidden rounded-2xl border border-white/20 bg-white/5 shadow-2xl backdrop-blur-md">
+            <div className="w-full max-w-[500px] h-[570px] mx-auto mt-10 overflow-visible rounded-2xl border border-white/20 bg-white/5 shadow-2xl backdrop-blur-md">
               {/* Image */}
               <div className="w-full overflow-hidden h-[160px]">
                 <img
@@ -302,8 +302,8 @@ const Projects = () => {
               </div>
             </div>
 
-            {/* 2 project Box  */}
-             <div className="w-full max-w-[500px] h-[450px] mx-auto mt-10 overflow-hidden rounded-2xl border border-white/20 bg-white/5 shadow-2xl backdrop-blur-md">
+            {/* 2 project Collaborative Project Management */}
+             <div className="w-full max-w-[500px] h-[620px] mx-auto mt-10 overflow-hidden rounded-2xl border border-white/20 bg-white/5 shadow-2xl backdrop-blur-md">
 
         <div className="w-full  h-[180px] overflow-hidden">
           <img
