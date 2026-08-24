@@ -186,7 +186,7 @@ const Projects = () => {
         </div>
 
         {/* YouTube Backend Project */}
-        <div className="w-full h-[620px] sm:h-[530px] md:h-[500px] mx-auto mt-10  ">
+        <div className="  ">
           <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-8  justify-center">
             <div className="w-full max-w-[500px] h-[450px] mx-auto mt-10 overflow-hidden rounded-2xl border border-white/20 bg-white/5 shadow-2xl backdrop-blur-md">
               {/* Image */}
